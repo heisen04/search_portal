@@ -21,12 +21,31 @@ function changeimage(){
 	else{
 	imageName='1459318278phpmexk3j.jpeg';
 	}
-	document.getElementById("first_div").style.backgroundImage = "url('images/"+imageName+"')";
+	document.getElementById("first_div").style.backgroundImage = "url('imgs/"+imageName+"')";
 	console.log(imageName);
 	//call same function again for x of seconds
 	setTimeout("changeimage()",((5)*1000));
 }
 </script>
+
+<style>
+#search_div:hover {  
+	background-color : gray;
+	height:25%;
+	width: 25%;border-radius:20px;
+	opacity:0.75;
+	width: 50%;
+	margin: 0 auto;
+}
+#search_div{
+	background-color : gray;
+	height:25%;
+	width: 25%;border-radius:20px;
+	opacity:0.5;
+	width: 50%;
+	margin: 0 auto;
+}
+</style>
 
 </head>
 <body onload="changeimage()">
@@ -61,12 +80,7 @@ function changeimage(){
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
-      </form>
+      
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
@@ -84,8 +98,32 @@ function changeimage(){
   </div><!-- /.container-fluid -->
 </nav>
 
-<div id="first_div" style="background-image: url('images/1459318278phpmexk3j.jpeg'); height:447px; width: 100%;">
-    div with background
+<div id="first_div" style="background-image: url('imgs/1459318278phpmexk3j.jpeg'); height:447px; width: 100%;">
+	<div style="height:25%; width: 25%">
+		<!-- Div used to give second div padding -->
+	</div>
+	<div id="search_div">
+		<form class="navbar-form navbar-left">
+        		<div class="form-group">
+          			<input type="text" class="form-control" placeholder="Search">
+        		</div>
+        		<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+      		</form>
+	</div>
+</div>
+
+<div class="row" id="second_div" style="width:100%; margin : 10px 1px 1px 0px">
+	<div class="col-lg-4" style="background-color:lightblue;border-style:solid">
+		Column 1
+	</div>
+
+	<div class="col-lg-4" style="background-color:lightblue;border-style:solid">
+		Column 2
+	</div>
+
+	<div class="col-lg-4" style="background-color:lightblue;border-style:solid">
+		Column 3
+	</div>
 </div>
 
 </body>
